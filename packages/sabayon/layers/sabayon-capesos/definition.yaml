@@ -1,0 +1,11 @@
+category: "distro"
+name: "sabayon-capesos"
+version: "20200920"
+requires:
+- category: "distro"
+  name: "concours-base"
+  version: ">=20200920"
+conflits:
+- category: "distro"
+  name: "sabayon-agregos"
+  version: ">=20200920"

@@ -1,0 +1,7 @@
+[capesos-commun]
+   desc = Depot capesos commun
+   repo=ftp://avril-simonet.hd.free.fr/repo/capesos-commun#bz2
+   enabled=true
+   pkg=ftp://avril-simonet.hd.free.fr/repo/capesos-commun
+   community-mode=enable
+   default-repository=capesos-commun

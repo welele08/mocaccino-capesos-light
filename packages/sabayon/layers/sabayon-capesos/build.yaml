@@ -1,0 +1,9 @@
+steps:
+  - ACCEPT_LICENSE=* equo i x11-themes/capesos-artwork-sddm
+  - cp -r remaster/* /
+#patch du script sabayon-live pour changer le user?
+
+requires:
+- category: "distro"
+  name: "concours-base"
+  version: ">=20200920"

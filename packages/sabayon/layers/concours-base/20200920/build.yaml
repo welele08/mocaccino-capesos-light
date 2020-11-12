@@ -1,0 +1,115 @@
+unpack: true
+includes:
+- /bin$|/bin/.*
+- /dev$|/dev/.*
+- /etc$
+# TODO: Add /etc to config protect
+- /etc$|/etc/.*
+- /home$|/home/.*
+- /lib$|/lib.*
+- /media$|/media/.*
+- /mnt$|/mnt/.*
+- /opt$|/opt/.*
+- /root$|/root/.*
+- /run$|/run/.*
+- /sbin$|/sbin/.*
+- /usr$|/usr/.*
+- /var$|/var/.*
+steps:
+- cp -rfv desc/* /etc/entropy/repositories.conf.d
+- equo up
+- >
+  ACCEPT_LICENSE=* equo i
+  @xfce
+  @gst-plugins
+  @gst-plugins-extra
+  app-arch/file-roller
+  app-crypt/gnupg
+  app-crypt/pinentry-gtk2
+  app-dicts/aspell-de
+  app-dicts/aspell-en
+  app-dicts/aspell-fr
+  app-dicts/aspell-it
+  app-dicts/aspell-nl
+  app-dicts/aspell-pl
+  app-dicts/myspell-de
+  app-dicts/myspell-en
+  app-dicts/myspell-es
+  app-dicts/myspell-fr
+  app-dicts/myspell-it
+  app-dicts/myspell-nl
+  app-misc/gnote
+  app-office/libreoffice
+  gnome-extra/nm-applet-gtk2
+  gnome-extra/polkit-gnome
+  media-gfx/gimp
+  media-gfx/ristretto
+  media-gfx/shotwell
+  media-libs/libdvdcss
+  media-libs/libdvdnav
+  media-libs/libdvdread
+  media-libs/libopenraw
+  media-sound/audacious
+  media-sound/pavucontrol
+  net-dialup/globespan-adsl
+  net-dialup/ppp
+  net-dialup/rp-pppoe
+  net-firewall/ufw-frontends
+  net-print/cups
+  net-wireless/bluez
+  sys-apps/usbutils
+  sys-firmware/bluez-firmware
+  net-wireless/bluez-hcidump
+  sys-block/gparted
+  sys-block/parted
+  sys-boot/os-prober
+  sys-fs/ntfs3g
+  sys-power/cpupower
+  x11-libs/libva-intel-driver
+  x11-libs/libva-vdpau-driver
+  x11-misc/magneto-gtk
+  x11-misc/xvkbd
+  x11-terms/xfce4-terminal
+  x11-terms/xterm
+  x11-themes/gnome-themes-standard
+  x11-themes/iottinka-artwork
+  x11-themes/sabayon-artwork-core
+  x11-themes/sabayon-artwork-grub
+  x11-themes/tango-icon-theme
+  xfce-base/xfce4-panel
+  xfce-extra/tumbler
+  xfce-extra/xfce4-clipman-plugin
+  xfce-extra/xfce4-mixer
+  xfce-extra/xfce4-notifyd
+  xfce-extra/xfce4-places-plugin
+  xfce-extra/xfce4-pulseaudio-plugin
+  xfce-extra/xfce4-screenshooter
+  xfce-extra/xfce4-volumed-pulse
+  app-misc/capesos-skel
+  x11-themes/capesos-artwork-wallpapers
+  x11-themes/Humanity-Dark-Aqua-icon-theme
+  x11-themes/capesos-artwork-grub
+  x11-themes/capesos-artwork-core
+  x11-themes/capesos-artwork-cursors
+  x11-themes/capesos-artwork-plymouth
+  x11-misc/sddm
+  x11-apps/capesos-screencapture
+  x11-misc/blackscreen
+  app-doc/zeal
+  app-doc/zeal-icon-capesos
+  gnome-base/nautilus
+  app-editors/vim
+  www-client/chromium
+  app-office/libreoffice-icon-capesos
+
+- equo rm sabayon-skel
+- equo i capesos-skel
+- equo cleanup
+- cp /etc/shadow /etc/shadow.defaults
+- cp /etc/passwd /etc/passwd.defaults
+- cp /etc/group /etc/group.defaults
+- rm /var/log/entropy/entropy.log || true
+requires:
+- category: "distro"
+  name: "sabayon-minimal-x"
+  version: ">=0.1"

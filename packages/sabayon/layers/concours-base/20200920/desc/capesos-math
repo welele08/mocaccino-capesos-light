@@ -1,0 +1,7 @@
+[capesos-math]
+   desc = Depot capesos math
+   repo=ftp://avril-simonet.hd.free.fr/repo/capesos-math#bz2
+   enabled=true
+   pkg=ftp://avril-simonet.hd.free.fr/repo/capesos-math
+   community-mode=enable
+   default-repository=capesos-math

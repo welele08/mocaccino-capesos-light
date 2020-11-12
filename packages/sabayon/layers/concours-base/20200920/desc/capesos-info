@@ -1,0 +1,7 @@
+[capesos-info]
+   desc = Depot capesos info
+   repo=ftp://avril-simonet.hd.free.fr/repo/capesos-info#bz2
+   enabled=true
+   pkg=ftp://avril-simonet.hd.free.fr/repo/capesos-info
+   community-mode=enable
+   default-repository=capesos-info

@@ -1,0 +1,7 @@
+[builder-tools]
+   desc = Depot capesos builder tools for paquet-builder
+   repo=ftp://avril-simonet.hd.free.fr/repo/builder-tools#bz2
+   enabled=true
+   pkg=ftp://avril-simonet.hd.free.fr/repo/builder-tools
+   community-mode=enable
+   default-repository=builder-tools

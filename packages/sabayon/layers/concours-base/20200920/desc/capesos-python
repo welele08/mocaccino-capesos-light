@@ -1,0 +1,7 @@
+[capesos-python]
+   desc = Depot capesos python
+   repo=ftp://avril-simonet.hd.free.fr/repo/capesos-python#bz2
+   enabled=true
+   pkg=ftp://avril-simonet.hd.free.fr/repo/capesos-python
+   community-mode=enable
+   default-repository=capesos-python

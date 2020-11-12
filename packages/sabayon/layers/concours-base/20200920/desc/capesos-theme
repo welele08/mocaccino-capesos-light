@@ -1,0 +1,7 @@
+[capesos-theme]
+   desc = Depot capesos theme
+   repo=ftp://avril-simonet.hd.free.fr/repo/capesos-theme#bz2
+   enabled=true
+   pkg=ftp://avril-simonet.hd.free.fr/repo/capesos-theme
+   community-mode=enable
+   default-repository=capesos-theme
